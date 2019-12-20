@@ -9,31 +9,31 @@ export class ProductService {
   constructor(private http: HttpClient) { }
   login(user) {
      
-    return this.http.post("https://github.com/parambannavas/productApp-backend/login", user);
+    return this.http.post("https://productbackendapp.herokuapp.com/login", user);
   }
   signup(userData) {
-    return this.http.post("https://github.com/parambannavas/productApp-backend/signup", userData);
+    return this.http.post("https://productbackendapp.herokuapp.com/signup", userData);
   }
 
 
   getProducts() {
-    return this.http.get("https://github.com/parambannavas/productApp-backend/products");
+    return this.http.get("https://productbackendapp.herokuapp.com/products");
 
   }
   addProducts(item) {
-    return this.http.post("https://github.com/parambannavas/productApp-backend/products/add", item);
+    return this.http.post("https://productbackendapp.herokuapp.com/products/add", item);
   }
 
   deleteProduct(id) {
-    return this.http.post("https://github.com/parambannavas/productApp-backend/products/delete", {id:id});
+    return this.http.post("https://productbackendapp.herokuapp.com/products/delete", {id:id});
   }
 
   editProduct(id) {
-    return this.http.post("https://github.com/parambannavas/productApp-backend/products/edit", {id:id});
+    return this.http.post("https://productbackendapp.herokuapp.com/products/edit", {id:id});
   }
 
   updateProduct(product) {
-    return this.http.post("https://github.com/parambannavas/productApp-backend/products/update", product);
+    return this.http.post("https://productbackendapp.herokuapp.com/products/update", product);
   }
 
   setId(id) {
